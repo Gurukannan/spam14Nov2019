@@ -37,9 +37,9 @@ def predict():
 
 		my_prediction = str(my_prediction[0])
 		if my_prediction == '1':
-			return "That looks like a spam message"
+			return "That looks like a spam (Naive_bayes Algorithm-Accuracy 98%)"
 		else:
-			return "This looks like a ham message."
+			return "This is not a spam (Naive_bayes Algorithm-Accuracy 98%)"
 
 
 
