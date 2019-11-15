@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<title>Spam Detection App</title>
-</head>
+   <title>Spam Detection App</title>
+
+ </head>
+<body 
+    style = "   
+            display: flex; 
+            margin: 0; 
+            padding: 0; 
+            min-height: 100vh; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+            text-align: center; 
+            background-image: url('https://wallpapercave.com/wp/EQLv3Na.jpg');
+ 		height: 100%;	    
+background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            " >
+</body>
+
 <body>
-<div class="container">
-	<div class="jumbotron">
-    <h2>Spam Detection App</h2> 
-    <p>Enter a text message and I'll tell you whether it's spam or not.</p>
-  </div>
-<form method="post" action="{{ url_for('predict') }}">
-  <div class="form-group">
-    <label for="Review">Message</label>
-    <textarea name="sample_text" class="form-control" placeholder="Enter Sample Message"></textarea> 
-  </div>
- 
-  <button type="submit" class="btn btn-primary">Predict</button>
-</form>
+  <div class="container">
+   <h2 style="color:White;">Welcome to Predictive Analytics by Guru.K</h2>
+    <h3 style="color:White;">Spam Detection App</h3>
+<h4 style="color:White;">Algorithm Used : sklearn.naive_bayes-MultinomialNB</h4>
+    
+   </div>
+
+   <form method="post" action="{{ url_for('predict') }}">
+
+   <div class="form-group">
+     <label for="Review">,</label>
+     <textarea textarea rows="2" cols="37" name="sample_text" class="form-control" placeholder="Enter Sample Message. Refer below table if you need any help"></textarea>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Predict</button>
+
+
+<br>
+<br>
+<br>
+
+
+<style type="text/css">
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: black; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<table class="tableizer-table">
+
+ <tr><td>Not Spam</td><td>Hmm going on</td></tr>
+ <tr><td>Not Spam</td><td>Call me</td></tr>
+ <tr><td>Not Spam</td><td>gonna let me know cos comes bak from holiday that day. is coming. Don't4get2text me number.</td></tr>
+ <tr><td>Not Spam</td><td>Hmm ipo venam . Naduvla theva pata i wil cl u.</td></tr>
+ <tr><td>spam</td><td>#AccheDeal - Popular Personal Loans @ as low as 10.99% interest and NO processing fee. Get this deal in just a click. Hurry! TnC apply bstdeal.in/QJYoqQzl4a</td></tr>
+ <tr><td>spam</td><td>+449071512431 URGENT! This is the 2nd attempt to contact U!U have WON £1250 CALL 09071512433 b4 050703 T&CsBCM4235WC1N3XX. callcost 150ppm mobilesvary. Max £7. 50</td></tr>
+ <tr><td>spam</td><td>0% VA@KALYAN JEWELLERS - AKSHAYATRITIYA especially for you from May 3 - 7.Shop for a min of 30K and avail 0% VA for 15K. Use 10FCEHZZ. TC</td></tr>
+ <tr><td>spam</td><td>10% Instant Discount on grocery at Flipkart's Supermart with SBI Credit Card. Min. Trxn:Rs.1500; Max. Discount: Rs.200 per card. Validity : 22-26 Jul'19.T&C</td></tr>
+</tbody></table>
+    </form>
 </body>
 </div>
 </html>
